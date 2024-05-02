@@ -114,3 +114,28 @@ button:focus {
 .modern-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+/* Error message styles */
+
+.flash {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px; /* Rounded corners */
+  }
+
+.flash.error {
+    color: #a02a36; /* Red color for error messages */
+    font-size: 1.6rem; /* Smaller font size for error messages */
+    margin-top: 0.5rem; /* Adjust spacing from input fields */
+    background-color: #fde2e2; /* Light red background color */
+    border: 2px solid #ea5a5a; /* Red border */
+}
+
+/* Success message styles */
+.flash.success {
+    color: #1c7530; /* Green color for success messages */
+    font-size: 1.6rem; /* Smaller font size for success messages */
+    margin-top: 0.5rem; /* Adjust spacing from input fields */
+    background-color: #d9f3e8; /* Light green background color */
+    border: 2px solid #2b9348; /* Green border */
+}

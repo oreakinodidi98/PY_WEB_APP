@@ -4,6 +4,7 @@ import pages
 import posts
 import database
 import os
+import errors
 from dotenv import load_dotenv
 from database import init_db_command
 
@@ -16,16 +17,20 @@ def create_app():
     app = Flask(__name__)
     # gives you acces to load enviroment variables from the .env file that start with FLASK_ , then it will strip the FLASK_ prefix and set the rest of the key as a config variable
     app.config.from_prefixed_env()
+    # display log level of info and above
+    app.logger.setLevel('INFO')
     # initialize the app with the config file from database.py
     database.init_app(app)
     # initialize the app with the config file from pages.py
     app.register_blueprint(pages.bp)
     # initialize the app with the config file from posts.py
     app.register_blueprint(posts.bp)
+    # initialize the app with the config file from errors.py
+    app.register_error_handler(404, errors.page_not_found)
     # print out current enviroment variable
-    print(f'\nCurrent Enviroment:{os.getenv("ENVIRONMENT")}')
+    app.logger.debug(f'\nCurrent Enviroment:{os.getenv("ENVIRONMENT")}')
     # print out database name
-    print(f'\nUsing Database:{app.config.get("DATABASE")}')
+    app.logger.debug(f'\nUsing Database:{app.config.get("DATABASE")}')
     #initializes the app and returns it. 
     return app
 

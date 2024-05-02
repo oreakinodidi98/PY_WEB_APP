@@ -1,5 +1,5 @@
 # import blueprints, this are modules that contain related views that you can conveniently import in __init__.py
-from flask import Blueprint , render_template, request, redirect, url_for
+from flask import Blueprint , render_template, request, redirect, url_for, flash , current_app
 from database import get_db
 
 #create instance of blueprint, pages is the name of the blueprint, __name__ is the name of the module
@@ -19,7 +19,11 @@ def create():
                 "INSERT INTO post (author, message) VALUES (?, ?)", (author , message )
             )
             db.commit()
+            current_app.logger.info(f"New post by {author}")
+            flash(f"Thanks for posting, {author}!", category="success")
             return redirect(url_for("posts.posts"))
+        else:
+            flash("You need to post a message.", category="error")
         
     return render_template("posts/create.html")
 
