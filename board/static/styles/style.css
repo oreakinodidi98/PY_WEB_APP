@@ -1,0 +1,101 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #f0f2f5; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Use Arial font family */
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Input and button styles */
+input[type="text"],
+textarea,
+button {
+    font-size: 1rem; /* Smaller font size for better readability */
+    padding: 1rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 1px solid #ccc; /* Light gray border */
+    outline: none; /* Remove outline on focus */
+}
+
+input[type="text"]:focus,
+textarea:focus,
+button:focus {
+    border-color: #007bff; /* Blue border color on focus */
+}
+
+button {
+    cursor: pointer; /* Show pointer cursor on buttons */
+    background-color: #007bff; /* Blue button background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Link styles */
+a,
+a:visited {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Increased margin for better spacing */
+}
+
+/* Main content styles */
+main {
+    width: 80%; /* Width of the main content area */
+    margin: 0 auto; /* Center main content horizontally */
+}
+
+/* Post form styles */
+.post-form {
+    width: 100%;
+    max-width: 600px; /* Limit form width for better readability */
+}
+
+.post-form textarea {
+    width: 100%;
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+/* Post styles */
+.posts {
+    width: 100%;
+    max-width: 600px; /* Limit post width for better readability */
+}
+
+.post {
+    background-color: #fff; /* White background for posts */
+    padding: 1rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    margin-bottom: 20px; /* Increased margin between posts */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+}

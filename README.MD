@@ -6,6 +6,7 @@
 - activate the virtual enviroment: . .\venv\Scripts\Activate
 - install dependencies
   - pip install django
+  - python -m pip install Flask
   - pip install flake8
   - pip install waitress
   - pip install requests python-dotenv Flask
@@ -37,7 +38,19 @@
 - templates
   - index.html
   - This is homepage everyone sees, can click "!" then TAB to get a skeleton
-  
+- main.py
+- repository.py
+
+in  index.html you can use
+
+```html
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+or
+<link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+```
+
+- can reference a CSS file with a <link> tag in the header of your HTML page
+
 ## deploy to web
 
 - go to [render.com](https://render.com/)
