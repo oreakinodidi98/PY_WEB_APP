@@ -10,6 +10,7 @@
   - pip install flake8
   - pip install waitress
   - pip install requests python-dotenv Flask
+  - python -m pip install click
     - check code: flake8 <code>.py
 
 - Deactivate the virtual environment: venv\Scripts\deactivate.bat
@@ -50,6 +51,12 @@ or
 ```
 
 - can reference a CSS file with a <link> tag in the header of your HTML page
+
+## enviroment variables
+
+- enviroment variables
+- import secrets
+- secrets.token_hex()
 
 ## deploy to web
 

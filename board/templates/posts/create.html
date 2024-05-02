@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+{% block header %}
+<h2>Add Post:</h2>
+{% endblock header %}
+
+{% block content %}
+<form action="#" method="post">
+    <div class="post-form">
+        <label for="author">Name</label>
+        <input type="text" name="author" id="author" value="{{ request.form['author'] }}" class="form-control" cols="30" rows="3">
+    </div>
+    <div class="post-form">
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" placeholder="What's on your mind?" class="form-control">{{ request.form['message'] }}</textarea>
+    </div>
+    <div class="post-form">
+        <input type="submit" value="Post Message" class="modern-button">
+    </div>  
+</form>
+{% endblock content %}

@@ -18,8 +18,3 @@ def about():
 @bp.route('/contact')
 def contact():
     return render_template('pages/contact.html')
-
-# define post view page
-@bp.route('/post')
-def post():
-    return render_template('pages/post.html')

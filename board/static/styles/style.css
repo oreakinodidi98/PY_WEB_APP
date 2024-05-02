@@ -18,34 +18,6 @@ body {
     gap: 2rem;
 }
 
-/* Input and button styles */
-input[type="text"],
-textarea,
-button {
-    font-size: 1rem; /* Smaller font size for better readability */
-    padding: 1rem;
-    border-radius: 8px; /* Slightly rounded corners */
-    border: 1px solid #ccc; /* Light gray border */
-    outline: none; /* Remove outline on focus */
-}
-
-input[type="text"]:focus,
-textarea:focus,
-button:focus {
-    border-color: #007bff; /* Blue border color on focus */
-}
-
-button {
-    cursor: pointer; /* Show pointer cursor on buttons */
-    background-color: #007bff; /* Blue button background color */
-    color: #fff; /* White text color */
-    border: none; /* Remove border */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
 
 /* Link styles */
 a,
@@ -92,10 +64,53 @@ main {
     max-width: 600px; /* Limit post width for better readability */
 }
 
-.post {
+.posts article {
     background-color: #fff; /* White background for posts */
     padding: 1rem;
     border-radius: 8px; /* Slightly rounded corners */
     margin-bottom: 20px; /* Increased margin between posts */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+}
+
+.posts article p.post {
+    margin-bottom: 0.5rem; /* Adjust spacing between post message and metadata */
+}
+
+.posts article aside {
+    font-size: 0.8rem; /* Smaller font size for metadata */
+    color: #666; /* Dark gray color for metadata */
+}
+
+
+/* Input and button styles */
+input[type="text"],
+textarea,
+button {
+    font-size: 1rem; /* Smaller font size for better readability */
+    padding: 1rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 1px solid #ccc; /* Light gray border */
+    outline: none; /* Remove outline on focus */
+}
+
+input[type="text"]:focus,
+textarea:focus,
+button:focus {
+    border-color: #007bff; /* Blue border color on focus */
+}
+
+/* Updated button styles */
+.modern-button {
+    font-size: 1rem; /* Font size */
+    padding: 1rem 0.5rem; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.modern-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
